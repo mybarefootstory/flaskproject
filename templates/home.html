@@ -9,23 +9,34 @@
   
   <style>
     #banner{
-      height: auto;
+      height: 360px;
       object-fit:cover;
       width: 100%;
+      margin-bottom: 16px;
     }
   </style>
   </head>
   <body>
-    <div class="container text-center" >
-      <h1 class="text-center mt-2 mb-5">Jovian Careers</h1>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-5">{{company_name}} Careers</h1>
       <img id="banner" src="https://3f88de00-f709-4c5e-ac5d-81e318d96a63-00-3lwov037jkmb6.sisko.replit.dev/static/image.jpg" class="img-fluid" alt="image">
-      <h2 class="text-center mt-2 mb-2">About Jovian</h2>
-      <p class="text-center mt-2 mb-2 lead">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis arcu in justo blandit, eu vehicula sapien commodo. Sed eu scelerisque sem. Mauris et ligula nec orci tincidunt fermentum. Quisque tristique euismod sapien, eget tincidunt lectus venenatis a. Donec feugiat tristique viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus"</p>
-      <h2 class="text-center mt-2 mb-2">Open Positions</h2>
-      <p class="text-center mt-2 mb-2 lead">ToDo - Show the jobs here</p>
+    <div class="container">
+      <h2 class="text-center mt-2 mb-4">About Jovian</h2>
+    <div>
+      <p class="lead">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis arcu in justo blandit, eu vehicula sapien commodo. Sed eu scelerisque sem. Mauris et ligula nec orci tincidunt fermentum. Quisque tristique euismod sapien, eget tincidunt lectus venenatis a. Donec feugiat tristique viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus"</p>
+    </div>
+  </div>
+      <h2 class="text-center mt-2 mb-4 ">Open Positions</h2>
+      <div>
+          {%for job in jobs%}
+            
+            {% include 'jobitem.html' %}
+    
+          {% endfor %}
+      </div>
       <div class="text-center" >
-        <button type="button" class="btn btn-success btn-lg" disabled>Contact us</button>
-        <p class="text-center mt-2 mb-2">Copyright Jovian 2022</p>
+        <button class="btn btn-success btn-lg">Contact us</button>
+        <p class="mt-4">Copyright Jovian 2022</p>
       </div>
     </div>
   </body>
